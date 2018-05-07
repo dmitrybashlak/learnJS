@@ -4,6 +4,8 @@ var arr = {
 	C: 3,
 };
 
+console.log(arr);
+
 var result = {};
 for (var key in arr){
 	result[arr[key]] = key;
