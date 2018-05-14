@@ -1,7 +1,7 @@
 var objects = [{
         A: 1,
         B: 2,
-        name: 'vasya'
+        name: 'Vasya'
     },
     {
         A: 3,
@@ -20,6 +20,7 @@ console.log('Initial array:', objects);
 for (var i = 0; i < objects.length; i++) {
     if (objects[i].name == 'Vasya') {
         console.log('Object with name Vasya:', objects[i]);
+        break;
     }
 
 }
