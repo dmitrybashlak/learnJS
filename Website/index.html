@@ -2,19 +2,20 @@
 <html>
    <head>
       <title>Website</title>
+      <script src="./js/script.js"></script>
    </head>
    <body>
-      <select>
+      <select id="manufacturer" name="manufacturer" onChange="onManufacturerChange()">
          <option selected></option>
          <option value="apple">Apple</option>
          <option value="samsung">Samsung</option>
          <option value="nokia">Nokia</option>
       </select>
-      <select>
+      <select id="model" name="model">
          <option selected></option>
       </select>
-      <button>Generate report</button>
-      <div></div>
-      <div></div>
+      <button type="button" onClick="generateReport()">Generate report</button>
+      <div id="error"></div>
+      <div id="report"></div>
    </body>
 </html>
