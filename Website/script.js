@@ -5,8 +5,8 @@ var models = [{
     },
     {
         brand: "nokia",
-        name: "11200",
-        value: "11200"
+        name: "1100",
+        value: "1100"
     },
     {
         brand: "apple",
@@ -44,41 +44,38 @@ function compareModels(a, b) {
 }
 
 function cleanModelDropdown() {
-    document.getElementById("model")
-        .innerHTML = "<option selected></option>";
+    document.getElementById("model").innerHTML = "<option selected></option>";
 };
 
 function onManufacturerChange() {
     cleanModelDropdown();
-    var value = document.getElementById("manufacturer")
-        .value;
+    var value = document.getElementById("manufacturer").value;
     if (value) {
         fillModelDropdown(value);
     }
 };
 
 function filterModelsByBrand(brand) {
-    return models.filter(function(item) {
+    return models.filter(function (item) {
         return item.brand == brand;
     });
 }
 
 function fillModelDropdown(brand) {
     var select = document.getElementById("model");
-    filterModelsByBrand(brand)
-        .forEach(function(item) {
-            var option = document.createElement('option');
-            option.text = item.name;
-            option.value = item.value;
-            select.add(option);
-        });
+    filterModelsByBrand(brand).forEach(function (item) {
+        var option = document.createElement('option');
+        option.text = item.name;
+        option.value = item.value;
+        select.add(option);
+    });
 };
 
-function showError(message) {
+function showError (message) {
     document.getElementById('error').innerText = message;
 }
 
-function clearError() {
+function clearError () {
     document.getElementById("error").innerHTML = "";
 }
 
@@ -97,8 +94,6 @@ function generateReport() {
         tableNameRow = document.createElement('tr'),
         tableNameColumn = document.createElement('td');
 
-    table.style.width = '100%';
-    table.setAttribute('border', '1');
     tableNameColumn.setAttribute('colspan', '2');
     tableNameColumn.appendChild(document.createTextNode(manufacturer));
     tableNameRow.appendChild(tableNameColumn);
@@ -107,12 +102,12 @@ function generateReport() {
     var models = filterModelsByBrand(manufacturer).sort(compareModels),
         selectedModel = document.getElementById("model").value;
     if (selectedModel) {
-        models = models.filter(function(item) {
+        models = models.filter(function (item) {
             return item.value === selectedModel;
         })
     }
 
-    models.forEach(function(model) {
+    models.forEach(function (model) {
         var tr = document.createElement('tr'),
             modelColumn = document.createElement('td'),
             availibilityColumn = document.createElement('td'),
@@ -128,4 +123,5 @@ function generateReport() {
 
     table.appendChild(tableBody);
     document.getElementById("report").appendChild(table);
+
 }

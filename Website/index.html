@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-   <head>
-      <title>Website</title>
-      <script src="./js/script.js"></script>
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-      <select id="manufacturer" name="manufacturer" onChange="onManufacturerChange()">
-         <option selected></option>
-         <option value="apple">Apple</option>
-         <option value="samsung">Samsung</option>
-         <option value="nokia">Nokia</option>
-      </select>
-      <select id="model" name="model">
-         <option selected></option>
-      </select>
-      <button type="button" onClick="generateReport()">Generate report</button>
-      <div id="error"></div>
-      <div id="report"></div>
-   </body>
+
+<head>
+  <title>Испытательное задание 4</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <select id="manufacturer" name="manufacturer" onChange="onManufacturerChange()">
+      <option selected></option>
+      <option value="apple">Apple</option>
+      <option value="samsung">Samsung</option>
+      <option value="nokia">Nokia</option>
+    </select>
+
+    <select id="model" name="model">
+      <option selected></option>
+    </select>
+
+    <button type="button" onClick="generateReport()">Generate report</button>
+    <div id="error"></div>
+    <div id="report"></div>
+</body>
+
 </html>

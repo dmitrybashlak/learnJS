@@ -1,5 +1,5 @@
 body {
-    background: cornsilk;
+    background: cadetblue;
 }
 
 select {
@@ -10,6 +10,14 @@ select {
 button {
     background: yellow;
     font: bold italic 100% sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid black;
 }
 
 .available {
