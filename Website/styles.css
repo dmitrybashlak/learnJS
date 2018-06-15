@@ -1,0 +1,37 @@
+body {
+    background: cadetblue;
+}
+
+select {
+    border: 3px solid blue;
+    font: bold italic 100% serif;
+}
+
+button {
+    background: yellow;
+    font: bold italic 100% sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+.available {
+    color: green;
+    font: italic 100% monospace;
+}
+
+.non-availiable {
+    color: red;
+    font: bold 100% sans-serif;
+}
+
+#error {
+    color: red;
+    font: bold 100% serif;
+    text-align: center;
+}
